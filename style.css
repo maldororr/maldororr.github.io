@@ -1,5 +1,6 @@
 :root {
-    --background:rgba(0, 142, 143,1);
+    --colors:rgb(21, 29, 95);
+    --background:white;
 }
 
 header{
@@ -17,20 +18,20 @@ header{
 
 body{
     margin:0;
+    height: 100%;
 }
 
 .content{
-    height: 1000px;
-    background-color:#333;
+    height: 100%;
+    background-color:rgb(255, 255, 255);
     background-blend-mode: multiply;
     background-size:cover;
     display:grid;
 }
 
 .logo{
-    color:#FEC810;
+    color:var(--colors);
 font-family: Arial, Helvetica, sans-serif;
-text-transform: uppercase;
 
 }
 
@@ -68,7 +69,7 @@ nav li {
     margin-left:1em;
 }
 nav a {
-    color:#FEC810;
+    color:var(--colors);
     text-decoration: none;
     text-transform: uppercase;
     opacity: 0;
@@ -122,7 +123,8 @@ align-items:center;
         display:flex;
         justify-content: flex-end;
         align-items: center;
-    
+        font-size: 16px;
+
     }
 
     .nav-toogle-label{
@@ -136,15 +138,15 @@ header{
 }
 
 .logo {
-    grid-column: 2 / 3;
-
- }
+grid-column: 2/3;
+}
 
  
  nav a{
      
      opacity:1;
      position:relative;
+     top:20px;
  }
 
 nav ul {
@@ -159,8 +161,8 @@ nav li{
 nav a::after {
     content:'';
     display:block;
-    height: 4px;
-    background:#FEC810;
+    height: 3px;
+    background: var(--colors);
     transform: scale(0, 1);
     transform-origin:left;
     transition: transform ease-in-out 200ms;
@@ -169,8 +171,28 @@ nav a::after {
 
 nav a:hover::after{
 
-    transform:scale(1,1);x
+    transform:scale(1,1);
 }
+
+.content{
+    display: grid;
+
+}
+
+.product1{
+    position: relative;
+    height: 400px;
+    grid-column: 4/5;
+    top:100px;
+}
+
+.product1text{
+    position:relative;
+    grid-column:2/3;
+    top:200px;
+
+}
+
 
 
 }
