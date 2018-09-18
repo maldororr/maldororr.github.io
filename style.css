@@ -1,14 +1,20 @@
-
-
-a {    text-decoration: none;
+:root {
+    --background:rgba(0, 142, 143,1);
 }
 
-li{
-    list-style: none;
+header{
+    background:var(--background);
 }
 
-li a {
-    display:block;
-    
+*, *::before, *::after {
+    box-sizing: border-box;
 }
 
+
+body{
+    margin:0;
+}
+
+.content{
+    height
+}
