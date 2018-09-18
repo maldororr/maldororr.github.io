@@ -38,8 +38,21 @@ nav{
     text-align: left;
     top:100%;
     left:0;
-    display:none;
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition:  transform 200ms ease-in-out;
 }
+
+.nav-toogle:checked ~ nav{
+    transform: scale(1, 1);
+    
+    }
+
+    .nav-toogle:checked ~ nav a {
+        opacity:1;
+        transition: opacity 150ms ease-in-out 150ms;
+
+    }
 
 nav ul{
     margin:0;
@@ -55,6 +68,8 @@ nav a {
     color:#FEC810;
     text-decoration: none;
     text-transform: uppercase;
+    opacity: 0;
+transition: opacity 150ms ease-in-out;
 }
 
 nav a:hover{
@@ -72,21 +87,42 @@ nav> ul> li:hover ul li {
 }
 /*  DISPLAY UL LI ON HOVER */
 
-.nav-toogle:checked ~ nav{
-display: block;
-}
 
 .nav-toogle{
     display:none;
 }
+
 .nav-toogle-label{
     position: absolute;
     top:0;
     left:0;
 margin-left: 1em;
-margin-top:1em;
+height: 100%;
+display:flex;
+align-items:center;
 }
+
+
 .burger-icon{
     height: 30px;
     cursor: pointer;
+ 
+}
+
+
+@media screen and (min-width: 800px){
+    .nav-toogle-label{
+        display: none;
+    }
+
+header{
+    display:grid;
+    grid-template-columns:  1fr auto minmax(600px, 1fr) 1fr;
+}
+
+.logo {
+    grid-column: 2 / 3;
+
+ }
+
 }
